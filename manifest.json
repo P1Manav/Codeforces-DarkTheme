@@ -1,0 +1,24 @@
+{
+  "manifest_version": 3,
+  "name": "Dark Mode for Codeforces",
+  "version": "1.0",
+  "description": "Enables dark mode on Codeforces website.",
+  "permissions": ["activeTab", "scripting", "storage"],
+  "background": {
+    "service_worker": "background.js"
+  },
+  "action": {
+    "default_popup": "popup.html",
+    "default_icon": {
+      "16": "icons/icon16.png",
+      "48": "icons/icon48.png",
+      "128": "icons/icon128.png"
+    }
+  },
+  "content_scripts": [
+    {
+      "matches": ["https://codeforces.com/*"],
+      "js": ["content.js"]
+    }
+  ]
+}
