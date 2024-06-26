@@ -83,31 +83,7 @@ a.user-black {
   color: #ffffff !important;
 }
 
-#usersRatingGraphPlaceholder img {
-  background: initial !important;
-}
 
-#usersRatingGraphPlaceholder .rated-user.user-gray {
-  color: #ffffff !important;
-}
-
-#usersRatingGraphPlaceholder .rated-user.user-admin {
-  background-color: initial !important;
-  color: #ffffff !important;
-}
-
-#usersRatingGraphPlaceholder a {
-  color: #ffffff !important;
-}
-
-#usersRatingGraphPlaceholder .header {
-  background-color: initial !important;
-}
-
-#usersRatingGraphPlaceholder .legendary-user-first-letter:first-letter {
-  
-  color: #ffffff !important;
-}
 
 img.enlarged {
   transform: scale(2);
