@@ -10,5 +10,6 @@ Dark Mode For Codeforces Coding Platform
   <li>Now , To run the extension Enable/Disable the Dark Mode by Toggling On or Off</li>
 </ol>
 
-<h2>If any Query or Suggestion , then please do contact me</h2>
+
+<h2> If any Query or Suggestion , then please do contact me </h2>
 

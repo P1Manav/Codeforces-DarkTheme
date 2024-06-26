@@ -4,9 +4,9 @@
   --Visitedlink: #8ab1ff;
 }
 * {
-  background-color: #000000 !important;
+  background-color: #262626 !important;
   color: #ffffff !important;
-  background: #000000 !important;
+  background: #262626 !important;
 }
 
 img {
@@ -40,34 +40,34 @@ a:visited:not(.rated-user) {
 table tr.highlighted-row td,
 .highlight-blue,
 .lang-chooser div[style^="background-color: #EAF4FF;"] {
-    background-color: #000000 !important;
+    background-color: #262626 !important;
 }
 
 .rated-user.user-admin {
-  background-color: #000000 !important;
+  background-color: #262626 !important;
   color: #FFFFFF !important;
 }
 
 .rated-user.user-black {
-  background-color: #000000 !important;
+  background-color: #262626 !important;
   color: #FFFFFF !important;
 }
 .user-rank .user-black {
-  background-color: #000000 !important;
+  background-color: #262626 !important;
   color: #FFFFFF !important;
 }
 a.groupName {
-  background-color: #000000 !important;
+  background-color: #262626 !important;
   color: #ffffff !important;
 }
 a {
-  background-color: #000000 !important;
+  background-color: #262626 !important;
   color: #ffffff !important;
 }
 
 
 .header {
-  background-color: #000000 !important;
+  background-color: #262626 !important;
 }
 span.user-legendary::first-letter,
 a.user-legendary::first-letter,
@@ -107,6 +107,10 @@ a.user-black {
 #usersRatingGraphPlaceholder .legendary-user-first-letter:first-letter {
   
   color: #ffffff !important;
+}
+
+img.enlarged {
+  transform: scale(3);
 }
 
 
