@@ -21,11 +21,20 @@ function applyDarkMode() {
         background: #FFFFFF !important;
       }
 
-      .legendary-user-first-letter span{
-        color: #FFFFFF !important;
-        background-color: #000000 !important;
+      /* Ensure display type and reset potential conflicting styles */
+      a.rated-user.user-legendary .legendary-user-first-letter {
+        display: inline; /* or inline-block */
+        color: white !important;
+        text-shadow: none !important; /* Reset any text shadow */
       }
-      .user-rank .user-black{
+  
+      .highlighted-row {
+        color: white !important;
+        background-color: black !important;
+        background: black !important;
+      }
+
+      .user-rank.user-black{
         background: #FFFFFF !important;
         color: #FFFFFF !important;
         background-color: #000000 !important;
@@ -38,11 +47,10 @@ function applyDarkMode() {
         background-color: #000000 !important;
         color: #FFFFFF !important;
       }
-
-      .rated-user.user-gray {
-        color: #FF0000 !important;
+      a.groupName{
+        background-color: #000000 !important;
+        color: #FFFFFF !important;
       }
-
       .header {
         color: #FFFFFF !important;
         background-color: #000000 !important;
