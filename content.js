@@ -8,16 +8,45 @@ document.addEventListener('DOMContentLoaded', function () {
 
 function applyDarkMode() {
   const darkModeStyles = `
-    body {
-      background-color: #000000 !important;
-      color: #ffffff !important;
-    }
-    a {
-      color: #ffffff !important;
-    }
-    .header {
-      background-color: #000000 !important;
-    }
+    * {
+        background-color: #000000 !important;
+        color: #FFFFFF !important;
+      }
+
+      b {
+        color: #FFFFFF !important;
+      }
+
+      img {
+        background: #FFFFFF !important;
+      }
+
+      .legendary-user-first-letter span{
+        color: #FFFFFF !important;
+        background-color: #000000 !important;
+      }
+      .user-rank .user-black{
+        background: #FFFFFF !important;
+        color: #FFFFFF !important;
+        background-color: #000000 !important;
+      }
+      .rated-user.user-admin {
+        background-color: #000000 !important;
+        color: #FFFFFF !important;
+      }
+      .rated-user.user-black {
+        background-color: #000000 !important;
+        color: #FFFFFF !important;
+      }
+
+      .rated-user.user-gray {
+        color: #FF0000 !important;
+      }
+
+      .header {
+        color: #FFFFFF !important;
+        background-color: #000000 !important;
+      }
     /* Add more styles as needed */
   `;
 
