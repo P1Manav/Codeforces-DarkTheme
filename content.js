@@ -1,13 +1,13 @@
 function applyDarkMode() {
-  const darkModeStyles = `
+  const darkModeStyles = `            
       :root{
         --link: #21b0fd;
         --Visitedlink: #8ab1ff;
       }
       * {
-        background-color: #000000 !important;
+        background-color: #1a1a1a !important;
         color: #ffffff !important;
-        background: #000000 !important;
+        background: #1a1a1a !important;
       }
 
       img {
@@ -41,34 +41,34 @@ function applyDarkMode() {
       table tr.highlighted-row td,
       .highlight-blue,
       .lang-chooser div[style^="background-color: #EAF4FF;"] {
-          background-color: #000000 !important;
+          background-color: #1a1a1a !important;
       }
 
       .rated-user.user-admin {
-        background-color: #000000 !important;
+        background-color: #1a1a1a !important;
         color: #FFFFFF !important;
       }
 
       .rated-user.user-black {
-        background-color: #000000 !important;
+        background-color: #1a1a1a !important;
         color: #FFFFFF !important;
       }
       .user-rank .user-black {
-        background-color: #000000 !important;
+        background-color: #1a1a1a !important;
         color: #FFFFFF !important;
       }
       a.groupName {
-        background-color: #000000 !important;
+        background-color: #1a1a1a !important;
         color: #ffffff !important;
       }
       a {
-        background-color: #000000 !important;
+        background-color: #1a1a1a !important;
         color: #ffffff !important;
       }
 
 
       .header {
-        background-color: #000000 !important;
+        background-color: #1a1a1a !important;
       }
       span.user-legendary::first-letter,
       a.user-legendary::first-letter,
@@ -76,7 +76,7 @@ function applyDarkMode() {
       a.user-admin,
       span.user-black,
       a.user-black {
-          color: #fff !important;
+          color: #ffffff !important;
       }
 
       #usersRatingGraphPlaceholder * {
@@ -111,11 +111,10 @@ function applyDarkMode() {
       }
 
       img.enlarged {
-        transform: scale(3); /* Increase scale by 20% when enlarged */
+        transform: scale(2);
       }
 
   `;
-
 
   let styleSheet = document.getElementById("dark-mode-styles");
   if (!styleSheet) {
@@ -123,7 +122,7 @@ function applyDarkMode() {
     styleSheet.id = "dark-mode-styles";
     styleSheet.type = "text/css";
     styleSheet.innerText = darkModeStyles;
-    document.head.appendChild(styleSheet); 
+    document.head.appendChild(styleSheet);
   }
 
   document.body.classList.toggle('dark-mode');
@@ -131,13 +130,19 @@ function applyDarkMode() {
   var header = document.getElementById('header');
   var img = header.querySelector('img');
 
-  if (document.body.classList.contains('dark-mode')) {
-    img.src = '//i.ibb.co/C5vRrX6/Codeforces.jpg'; 
-  } else {
-    img.src = '//codeforces.org/s/87332/images/codeforces-sponsored-by-ton.png'; 
-  }
+  var currentImgSrc = img.src;
+  var codeforcesImgSrc = '//codeforces.org/s/87332/images/codeforces-sponsored-by-ton.png';
 
-  img.classList.toggle('enlarged');
+  if (currentImgSrc.includes(codeforcesImgSrc)) {
+    if (document.body.classList.contains('dark-mode')) {
+      img.src = '//i.ibb.co/y4mtvTX/Codeforces.jpg'; 
+      img.classList.toggle('enlarged'); 
+    } else {
+      img.src = codeforcesImgSrc;
+    }
+  } else {
+    img.classList.remove('enlarged');
+  }
 }
 
 chrome.storage.local.get(['darkModeEnabled'], (result) => {
@@ -155,11 +160,15 @@ chrome.storage.onChanged.addListener((changes, namespace) => {
       if (styleSheet) {
         styleSheet.remove(); 
       }
-      
+
       var header = document.getElementById('header');
       var img = header.querySelector('img');
-      img.src = '//codeforces.org/s/87332/images/codeforces-sponsored-by-ton.png'; 
-      
+
+      var codeforcesImgSrc = '//codeforces.org/s/87332/images/codeforces-sponsored-by-ton.png';
+      if (img.src.includes(codeforcesImgSrc)) {
+        img.src = codeforcesImgSrc;
+      }
+
       img.classList.remove('enlarged');
     }
   }

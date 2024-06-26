@@ -4,9 +4,9 @@
   --Visitedlink: #8ab1ff;
 }
 * {
-  background-color: #262626 !important;
+  background-color: #1a1a1a !important;
   color: #ffffff !important;
-  background: #262626 !important;
+  background: #1a1a1a !important;
 }
 
 img {
@@ -40,34 +40,34 @@ a:visited:not(.rated-user) {
 table tr.highlighted-row td,
 .highlight-blue,
 .lang-chooser div[style^="background-color: #EAF4FF;"] {
-    background-color: #262626 !important;
+    background-color: #1a1a1a !important;
 }
 
 .rated-user.user-admin {
-  background-color: #262626 !important;
+  background-color: #1a1a1a !important;
   color: #FFFFFF !important;
 }
 
 .rated-user.user-black {
-  background-color: #262626 !important;
+  background-color: #1a1a1a !important;
   color: #FFFFFF !important;
 }
 .user-rank .user-black {
-  background-color: #262626 !important;
+  background-color: #1a1a1a !important;
   color: #FFFFFF !important;
 }
 a.groupName {
-  background-color: #262626 !important;
+  background-color: #1a1a1a !important;
   color: #ffffff !important;
 }
 a {
-  background-color: #262626 !important;
+  background-color: #1a1a1a !important;
   color: #ffffff !important;
 }
 
 
 .header {
-  background-color: #262626 !important;
+  background-color: #1a1a1a !important;
 }
 span.user-legendary::first-letter,
 a.user-legendary::first-letter,
@@ -75,7 +75,7 @@ span.user-admin,
 a.user-admin,
 span.user-black,
 a.user-black {
-    color: #fff !important;
+    color: #ffffff !important;
 }
 
 #usersRatingGraphPlaceholder * {
@@ -110,7 +110,7 @@ a.user-black {
 }
 
 img.enlarged {
-  transform: scale(3);
+  transform: scale(2);
 }
 
 
