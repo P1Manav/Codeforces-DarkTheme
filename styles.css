@@ -22,9 +22,23 @@ img {
   color: #FFFFFF !important;
 }
 
-a {
+.rated-user.user-black {
+  background-color: #000000 !important;
+  color: #FFFFFF !important;
+}
+.user-rank .user-black {
+  background-color: #000000 !important;
+  color: #FFFFFF !important;
+}
+a.groupName {
+  background-color: #000000 !important;
   color: #ffffff !important;
 }
+a {
+  background-color: #000000 !important;
+  color: #ffffff !important;
+}
+
 
 .header {
   background-color: #000000 !important;

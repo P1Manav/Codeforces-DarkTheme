@@ -33,11 +33,13 @@ function applyDarkMode() {
         background-color: black !important;
         background: black !important;
       }
-
-      .user-rank.user-black{
-        background: #FFFFFF !important;
-        color: #FFFFFF !important;
+      .rated-user.user-black {
         background-color: #000000 !important;
+        color: #FFFFFF !important;
+      }
+      .user-rank .user-black {
+        background-color: #000000 !important;
+        color: #FFFFFF !important;
       }
       .rated-user.user-admin {
         background-color: #000000 !important;
