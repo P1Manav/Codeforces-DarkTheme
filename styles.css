@@ -1,4 +1,8 @@
 /* Default styling */
+:root{
+  --genericLinkBlueColor: #21b0fd;
+  --genericLinkVisitedBlueColor: #8ab1ff;
+}
 * {
   background-color: #000000 !important;
   color: #ffffff !important;
@@ -6,15 +10,45 @@
 }
 
 img {
-  background: #FFFFFF !important;
+  background: rgba(255, 255, 255, 0.2) !important;
+
 }
 
 
-.highlighted-row {
-  color: #ffffff !important;
-  background-color: #000000 !important;
-  background: #000000 !important;
+.second-level-menu ul li a:link,
+.second-level-menu ul li a:visited,
+span.verdict-unsuccessful-challenge 
+span.cell-rejected 
+a:not([href]):not(.rated-user),
+a:link:not(.rated-user) {
+    color: var(--genericLinkBlueColor) !important;
 }
+
+a:visited:not(.rated-user) {
+    color: var(--genericLinkVisitedBlueColor) !important;
+}
+
+/* Ensure .edu-menu-item has the same color as generic links */
+.edu-menu-item {
+  color: var(--genericLinkVisitedBlueColor) !important;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+/* during contest, own submissions's row needs to be highlighted */
+.comment-table.highlight-blue,
+.comment-table.highlight,
+.standings tr.highlighted-row td,
+table tr.highlighted-row td,
+.highlight-blue,
+/* You have a new message*/
+.lang-chooser div[style^="background-color: #EAF4FF;"] {
+    background-color: #000000 !important;
+}
+
+
+
+
 
 
 .rated-user.user-admin {
@@ -43,9 +77,13 @@ a {
 .header {
   background-color: #000000 !important;
 }
-
-.legendary-user-first-letter:first-letter {
-  color: #FFFFFF !important;
+span.user-legendary::first-letter,
+a.user-legendary::first-letter,
+span.user-admin,
+a.user-admin,
+span.user-black,
+a.user-black {
+    color: #fff !important;
 }
 
 /* Override styling within #usersRatingGraphPlaceholder */

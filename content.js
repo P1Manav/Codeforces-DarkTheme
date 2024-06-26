@@ -18,21 +18,35 @@ function applyDarkMode() {
       }
 
       img {
-        background: #FFFFFF !important;
+        background: rgba(255, 255, 255, 0.2) !important;
+      }
+      /* TEXT COLOR CHANGES */
+
+      /* always write most specific selector first in a chain of selectors
+      if they aren't mutually exclusive */
+      .second-level-menu ul li a:link,
+      .second-level-menu ul li a:visited,
+      span.verdict-unsuccessful-challenge /* unsuccessful hacking attempt */,
+      span.cell-rejected /* rejected indicator on contests' standings */,
+      a:not([href]):not(.rated-user),
+      a:link:not(.rated-user) {
+          color: var(--genericLinkBlueColor) !important;
       }
 
-      /* Ensure display type and reset potential conflicting styles */
-      a.rated-user.user-legendary .legendary-user-first-letter {
-        display: inline; /* or inline-block */
-        color: white !important;
-        text-shadow: none !important; /* Reset any text shadow */
+      /* all visited anchor elements  */
+      a:visited:not(.rated-user) {
+          color: var(--genericLinkVisitedBlueColor) !important;
       }
-  
-      .highlighted-row {
-        color: white !important;
-        background-color: black !important;
-        background: black !important;
+
+      span.user-legendary::first-letter,
+      a.user-legendary::first-letter,
+      span.user-admin,
+      a.user-admin,
+      span.user-black,
+      a.user-black {
+          color: #fff !important;
       }
+
       .rated-user.user-black {
         background-color: #000000 !important;
         color: #FFFFFF !important;
