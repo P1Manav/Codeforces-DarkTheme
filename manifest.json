@@ -18,6 +18,7 @@
   "content_scripts": [
     {
       "matches": ["https://codeforces.com/*"],
+      
       "js": ["content.js"]
     }
   ]
