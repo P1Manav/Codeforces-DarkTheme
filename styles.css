@@ -42,9 +42,6 @@ img[src^="//st.codeforces.com"]:not(.ajax-loading-gif),
 img[src^="//sta.codeforces.com"]:not(.ajax-loading-gif),
 img[src$="/lightning-16x16.png"],
 img[src$="/ok-16x16.png"],
-pre,
-body>pre,
-div.ttypography pre,
 .comment-table.highlight-blue,
 .comment-table.highlight,
 .standings tr.highlighted-row td,
@@ -144,9 +141,11 @@ div.diffHtmlTarget pre.prettyprint ins[style^="background:#80ff80"] .lit {
 
 
 
-table {
-  border: 2px solid;
-  border-color: #ffffff;
+table ,tr,th,td{
+  border: 1px solid;
+  border-color: #ffffff !important;
+  background-color: #1a1a1a !important;
+  color: #ffffff !important;
 }
 
 .second-level-menu-list li {
@@ -236,4 +235,42 @@ a.user-green {
 .test-example-line{
   background-color: #1a1a1a !important;
   background: #1a1a1a !important;
+}
+
+ul,li,ol,label,p{
+  background-color: #1a1a1a !important;
+  background: #1a1a1a !important;
+  color: #ffffff!important;
+}
+.datatable{
+  background-color: #1a1a1a !important;
+  background: #1a1a1a !important;
+  color: #ffffff!important;
+  color: #ffffff!important;
+}
+
+span.pln{
+  color: #ffffff!important;
+}
+span.pun{
+  color: #ffff00!important;
+}
+span.typ{
+  color: #ca1cca!important;
+}
+span.kwd{
+  color: #0000ff!important;
+}
+span.str{
+  color: #00ff00!important;
+}
+span.lit{
+  color: #00ffff!important;
+}
+span.com{
+  color: #ff0000!important;
+}
+
+.input,.output,.answer,.checker{
+  background-color: #000000 !important;
 }
