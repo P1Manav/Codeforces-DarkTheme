@@ -234,6 +234,10 @@ function applyDarkMode() {
     a.user-green {
       color: #00ff00 !important;
     }
+    .test-example-line{
+      background-color: #1a1a1a !important;
+      background: #1a1a1a !important;
+    }
   `;
 
   let styleSheet = document.getElementById("dark-mode-styles");
