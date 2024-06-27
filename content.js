@@ -100,16 +100,18 @@ function updateImage() {
   let codeforcesImgSrc = 'https://codeforces.org/s/78108/images/codeforces-sponsored-by-ton.png';
   let darkModeImgSrc = 'https://i.ibb.co/y4mtvTX/Codeforces.jpg';
   let currentSrc = img.src;
-  console.log(currentSrc);
-  if (currentSrc === codeforcesImgSrc){
-    if (document.body.classList.contains('dark-mode')) {
-      img.src = darkModeImgSrc;
-    } else {
-      img.src = currentSrc;
-    }
 
-    img.classList.toggle('enlarged', document.body.classList.contains('dark-mode'));
+  let images = document.getElementsByTagName('img');
+
+  for (let i = 0; i < images.length; i++) {
+      if (images[i].src.includes('codeforces-sponsored-by-ton.png')) {
+          images[i].src = 'https://i.ibb.co/y4mtvTX/Codeforces.jpg';
+          img.classList.toggle('enlarged', document.body.classList.contains('dark-mode'));
+          return;
+      }
   }
+  img.src=currentSrc;
+  console.log(currentSrc);
 }
 
 
