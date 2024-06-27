@@ -330,6 +330,7 @@ chrome.storage.onChanged.addListener((changes, namespace) => {
   if (namespace === 'local' && changes.darkModeEnabled) {
     if (changes.darkModeEnabled.newValue) {
       applyDarkMode();
+      
     } else {
       let styleSheet = document.getElementById("dark-mode-styles");
       if (styleSheet) {

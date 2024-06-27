@@ -7,12 +7,14 @@ chrome.action.onClicked.addListener((tab) => {
           target: { tabId: tab.id },
           files: ["styles.css"]
         });
+
       } else {
         chrome.scripting.removeCSS({
           target: { tabId: tab.id },
           files: ["styles.css"]
         });
       }
+      
     });
   });
 });
