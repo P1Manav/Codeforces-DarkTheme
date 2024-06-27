@@ -7,6 +7,7 @@ Dark Mode For Codeforces Coding Platform
   <li>Clone The Repository</li>
   <li>Go to Extension on Browser</li>
   <li>Enable Developer Mode</li>
+  <li>Close any open Codeforces Tabs , Open Codeforces <b>ONLY</b> after Loading the Repository</li>
   <li>Load the Directory of the Cloned Repository on the <b>"Load unpacked"</b></li>
   <li>Now , To run the extension Enable/Disable the Dark Mode by Toggling On or Off</li>
 </ol>
