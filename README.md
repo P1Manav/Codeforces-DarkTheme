@@ -14,5 +14,5 @@ Dark Mode For Codeforces Coding Platform
 
 
 
-<h2> If any Query or Suggestion , then please do contact me </h2>
-
+<h2> If any Query or Suggestion , </h2>
+<a href="https://forms.gle/qpd3dUdefM33C5K36">Then Write it here.</a>
