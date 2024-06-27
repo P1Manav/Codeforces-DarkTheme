@@ -72,7 +72,6 @@ function applyDarkMode() {
       color: #ffffff !important;
     }
     
-    
     img.enlarged {
       transform: scale(2);
     }
@@ -89,22 +88,26 @@ function applyDarkMode() {
 
   document.body.classList.toggle('dark-mode');
 
-  var header = document.getElementById('header');
-  var img = header.querySelector('img');
+  updateImage();
+}
 
-  var currentImgSrc = img.src;
-  var codeforcesImgSrc = '//codeforces.org/s/87332/images/codeforces-sponsored-by-ton.png';
+function updateImage() {
+  const header = document.getElementById('header');
+  if (!header) return;
 
-  if (currentImgSrc.includes(codeforcesImgSrc)) {
-    if (document.body.classList.contains('dark-mode')) {
-      img.src = '//i.ibb.co/y4mtvTX/Codeforces.jpg';
-      img.classList.toggle('enlarged');
-    } else {
-      img.src = codeforcesImgSrc;
-    }
+  const img = header.querySelector('img');
+  if (!img) return;
+
+  const codeforcesImgSrc = '//codeforces.org/s/87332/images/codeforces-sponsored-by-ton.png';
+  const darkModeImgSrc = '//i.ibb.co/y4mtvTX/Codeforces.jpg';
+
+  if (document.body.classList.contains('dark-mode')) {
+    img.src = darkModeImgSrc;
   } else {
-    img.classList.remove('enlarged');
+    img.src = codeforcesImgSrc;
   }
+
+  img.classList.toggle('enlarged', document.body.classList.contains('dark-mode'));
 }
 
 chrome.storage.local.get(['darkModeEnabled'], (result) => {
@@ -123,15 +126,8 @@ chrome.storage.onChanged.addListener((changes, namespace) => {
         styleSheet.remove();
       }
 
-      var header = document.getElementById('header');
-      var img = header.querySelector('img');
-
-      var codeforcesImgSrc = '//codeforces.org/s/87332/images/codeforces-sponsored-by-ton.png';
-      if (img.src.includes(codeforcesImgSrc)) {
-        img.src = codeforcesImgSrc;
-      }
-
-      img.classList.remove('enlarged');
+      document.body.classList.remove('dark-mode');
+      updateImage();
     }
     location.reload();
   }
