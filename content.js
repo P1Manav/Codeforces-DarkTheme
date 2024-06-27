@@ -72,7 +72,6 @@ function applyDarkMode() {
       color: #ffffff !important;
     }
     
-    
     img.enlarged {
       transform: scale(2);
     }
@@ -89,23 +88,30 @@ function applyDarkMode() {
 
   document.body.classList.toggle('dark-mode');
 
-  var header = document.getElementById('header');
-  var img = header.querySelector('img');
+  updateImage();
+}
+function updateImage() {
+  const header = document.getElementById('header');
+  if (!header) return;
 
-  var currentImgSrc = img.src;
-  var codeforcesImgSrc = '//codeforces.org/s/87332/images/codeforces-sponsored-by-ton.png';
+  const img = header.querySelector('img');
+  if (!img) return;
 
-  if (currentImgSrc.includes(codeforcesImgSrc)) {
+  let codeforcesImgSrc = 'https://codeforces.org/s/78108/images/codeforces-sponsored-by-ton.png';
+  let darkModeImgSrc = 'https://i.ibb.co/y4mtvTX/Codeforces.jpg';
+  let currentSrc = img.src;
+  console.log(currentSrc);
+  if (currentSrc === codeforcesImgSrc){
     if (document.body.classList.contains('dark-mode')) {
-      img.src = '//i.ibb.co/y4mtvTX/Codeforces.jpg';
-      img.classList.toggle('enlarged');
+      img.src = darkModeImgSrc;
     } else {
-      img.src = codeforcesImgSrc;
+      img.src = currentSrc;
     }
-  } else {
-    img.classList.remove('enlarged');
+
+    img.classList.toggle('enlarged', document.body.classList.contains('dark-mode'));
   }
 }
+
 
 chrome.storage.local.get(['darkModeEnabled'], (result) => {
   if (result.darkModeEnabled) {
@@ -123,15 +129,8 @@ chrome.storage.onChanged.addListener((changes, namespace) => {
         styleSheet.remove();
       }
 
-      var header = document.getElementById('header');
-      var img = header.querySelector('img');
-
-      var codeforcesImgSrc = '//codeforces.org/s/87332/images/codeforces-sponsored-by-ton.png';
-      if (img.src.includes(codeforcesImgSrc)) {
-        img.src = codeforcesImgSrc;
-      }
-
-      img.classList.remove('enlarged');
+      document.body.classList.remove('dark-mode');
+      updateImage();
     }
     location.reload();
   }

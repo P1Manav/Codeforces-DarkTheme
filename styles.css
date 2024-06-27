@@ -3,7 +3,7 @@
   --link: #21b0fd;
   --Visitedlink: #8ab1ff;
 }
-* {
+*{
   background-color: #1a1a1a !important;
   color: #ffffff !important;
   background: #1a1a1a !important;
@@ -89,4 +89,14 @@ img.enlarged {
   transform: scale(2);
 }
 
+.customtest #sourceCodeTextarea {
+  color: white !important;
+}
 
+
+textarea[name="source"],
+textarea[class="ace_text-input"],
+#sourceCodeTextarea {
+    background-color: #ffffff !important;
+    color: #ffffff !important;
+}
