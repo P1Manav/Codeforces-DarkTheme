@@ -1,8 +1,6 @@
 <H1># Codeforces-DarkTheme</H1>
 Dark Mode For Codeforces Coding Platform
 
-<h2>Just a Samll Issue Remaining Color Synchronization in Code Submit Area</h2>
-
 <h3>How To Start :</h3>
 <ol>
   <li>Clone The Repository</li>

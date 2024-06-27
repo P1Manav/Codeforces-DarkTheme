@@ -1,79 +1,235 @@
 function applyDarkMode() {
   const darkModeStyles = `
     :root {
+      --backgroundColor: #1a1a1a;
+      --fontColor: #ffffff;
       --link: #21b0fd;
       --Visitedlink: #8ab1ff;
     }
-    * {
-      background-color: #1a1a1a !important;
-      color: #ffffff !important;
-      background: #1a1a1a !important;
-    }
+
     img {
       background: rgba(255, 255, 255, 0.2) !important;
+      ;
     }
-    .second-level-menu ul li a:link,
-    .second-level-menu ul li a:visited,
-    span.verdict-unsuccessful-challenge,
-    span.cell-rejected,
-    a:not([href]):not(.rated-user),
-    a:link:not(.rated-user) {
-      color: var(--link) !important;
-    }
-    a:visited:not(.rated-user) {
-      color: var(--Visitedlink) !important;
-    }
-    .edu-menu-item {
-      color: var(--Visitedlink) !important;
-      text-decoration: none;
-      cursor: pointer;
-    }
+
+    body:not(.wysiwyg),
+    .roundbox,
+    .bottom-links,
+    .datatable td:not(.dark),
+    .datatable td:not(.dark) div.dark,
+    .datatable th,
+    .datatable>div.dark,
+    #facebox .content,
+    .talk-content div[id^="history-text-content"],
+    .spoiler-content,
+    .roundbox.highlight-blue,
+    .topic .content,
+    .comment-table,
+    .search,
+    .ac_input,
+    input[name$="Difficulty"],
+    input[type="text"],
+    #title,
+    #comment,
+    td.dark,
+    td.dark div.dark,
+    .ttypography tbody tr:hover td,
+    .status-frame-datatable tr td.dark,
+    div.ttypography tbody tr:hover th,
+    a,
+    #header>div:first-child img,
+    ._logo_div img,
+    .sidebox img[alt="Logo"],
+    img[src^="//st.codeforces.com"]:not(.ajax-loading-gif),
+    img[src^="//sta.codeforces.com"]:not(.ajax-loading-gif),
+    img[src$="/lightning-16x16.png"],
+    img[src$="/ok-16x16.png"],
+    pre,
+    body>pre,
+    div.ttypography pre,
     .comment-table.highlight-blue,
     .comment-table.highlight,
     .standings tr.highlighted-row td,
     table tr.highlighted-row td,
     .highlight-blue,
-    .lang-chooser div[style^="background-color: #EAF4FF;"] {
-      background-color: #1a1a1a !important;
-    }
-    .rated-user.user-admin {
-      background-color: #1a1a1a !important;
-      color: #FFFFFF !important;
-    }
-    .rated-user.user-black {
-      background-color: #1a1a1a !important;
-      color: #FFFFFF !important;
-    }
-    .user-rank .user-black {
-      background-color: #1a1a1a !important;
-      color: #FFFFFF !important;
-    }
-    a.groupName {
-      background-color: #1a1a1a !important;
-      color: #ffffff !important;
-    }
-    a {
-      background-color: #1a1a1a !important;
-      color: #ffffff !important;
-    }
-    .header {
-      background-color: #1a1a1a !important;
-    }
+    .lang-chooser div[style^="background-color: #EAF4FF;"],
+    .standings .cell-accepted,
+    .standings .cell-accepted-locked,
+    .standings .cell-challenged,
+    .standings .cell-passed-system-test,
+    blockquote,
+    div.alert-success,
+    div.ttypography .tt,
+    .search-help code,
+    .sidebar-menu ul li,
+    .sidebar-menu ul li:hover,
+    .problems tr.rejected-problem td.act,
+    .problems tr.accepted-problem td.act,
+    .problems tr.rejected-problem td.id,
+    .problems tr.accepted-problem td.id,
+    div.ttypography .MathJax,
+    div.ttypography a:hover,
+    div.ttypography a:focus,
+    table tbody tr th a img[alt^="Sort"],
+    .datatable td.state[style^="background-color: rgb(221, 238, 255);"],
+    .datatable td.state[style^="background-color: rgb(212, 237, 201);"],
+    .miu-complete,
+    .miu-comment,
+    .send-talk-form table .wysiwyg,
+    input[type="submit"],
+    input[type="button"],
+    input[type="file"],
+    .CalendarPage_calendar,
+    .CalendarPage_calendar iframe,
+    textarea[name="input"],
+    textarea[name="output"],
+    #sourceCodeTextarea,
+    .delete-resource-link,
+    .close,
+    .close_image,
+    .problem-statement .test-example-line-even,
+    span.error,
+    .roundbox.highlight-blue .caption.titled,
+    .roundbox.highlight-blue .caption.titled+div,
+    .second-level-menu ul li a:link,
+    .second-level-menu ul li a:visited,
+    span.verdict-unsuccessful-challenge,
+    span.cell-rejected,
+    a:not([href]):not(.rated-user),
+    a:link:not(.rated-user),
+    a:visited:not(.rated-user),
+    .info,
+    .ttypography,
+    .ttypography table,
+    .ttypography h1,
+    .ttypography h2,
+    .ttypography h3,
+    .ttypography h4,
+    .ttypography h5,
+    .ttypography h6,
+    .right-meta,
+    .tickLabel,
+    .personal-sidebar,
+    .roundbox,
+    #footer,
+    .pagination,
+    #locationSelect,
+    #pageContent,
+    #pageContent>div:not(:first-child),
+    body.notfoundpage h3,
+    #facebox .content,
+    .lang-chooser,
+    .page-index.active,
+    span#u_0_4,
+    .menu-list-container ul li a,
+    #header h3,
+    body>p,
+    body>ul,
+    .datatable td.state a,
+    div.setting-name,
     span.user-legendary::first-letter,
     a.user-legendary::first-letter,
     span.user-admin,
     a.user-admin,
     span.user-black,
+    a.user-black,
+    div.diffHtmlTarget pre.prettyprint del[style^="background:#ff8080"],
+    div.diffHtmlTarget pre.prettyprint ins[style^="background:#80ff80"],
+    div.diffHtmlTarget pre.prettyprint ins[style^="background:#80ff80"] .lit {
+      background: var(--backgroundColor) !important;
+      background-color: var(--backgroundColor) !important;
+      color: var(--fontColor) !important;
+    }
+
+
+
+    table {
+      border: 2px solid;
+      border-color: #ffffff;
+    }
+
+    .second-level-menu-list li {
+      border-radius: 5px !important;
+    }
+
+    .datatable td.state a[href$="standings"] {
+      color: #8cc3f9 !important;
+    }
+
+
+    span.user-admin,
+    a.user-admin,
+    span.user-black,
     a.user-black {
-      color: #ffffff !important;
+      color: var(--fontColor) !important;
     }
-    #usersRatingGraphPlaceholder * {
-      background-color: initial !important;
-      color: #ffffff !important;
-    }
-    
+
     img.enlarged {
       transform: scale(2);
+    }
+
+    .second-level-menu ul li a:link,
+    .second-level-menu ul li a:visited,
+    span.verdict-unsuccessful-challenge span.cell-rejected a:not([href]):not(.rated-user),
+    a:link:not(.rated-user) {
+      color: var(--link) !important;
+    }
+
+    a:visited:not(.rated-user) {
+      color: var(--Visitedlink) !important;
+    }
+
+    .edu-menu-item {
+      color: var(--Visitedlink) !important;
+      text-decoration: none;
+      cursor: pointer;
+    }
+
+    span.verdict-rejected {
+      color: var(--link) !important;
+    }
+
+
+    span.user-violet,
+    a.user-violet {
+      color: #ca1cca !important;
+    }
+
+    span.user-gray,
+    a.user-gray {
+      color: #cccccc !important;
+    }
+
+    span.user-orange,
+    a.user-orange{
+      color: #ffa500 !important;
+    }
+
+    span.user-cyan,
+    a.user-cyan {
+      color: #66ffff !important;
+    }
+
+    span.user-legendary,
+    a.user-legendary {
+      color: #ff0000 !important;
+
+    }
+
+    span.user-blue,
+    a.user-blue {
+      color: #0000ff !important;
+
+    }
+
+    span.user-red,
+    a.user-red {
+      color: #ff0000 !important;
+    }
+
+    span.user-green,
+    a.user-green {
+      color: #00ff00 !important;
     }
   `;
 
@@ -89,6 +245,7 @@ function applyDarkMode() {
   document.body.classList.toggle('dark-mode');
 
   updateImage();
+  
 }
 function updateImage() {
   const header = document.getElementById('header');
