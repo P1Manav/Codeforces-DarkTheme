@@ -343,6 +343,7 @@ chrome.storage.onChanged.addListener((changes, namespace) => {
 
       document.body.classList.remove('dark-mode');
       updateImage();
+      
     }
     location.reload();
   }
