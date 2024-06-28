@@ -279,6 +279,10 @@ function applyDarkMode() {
     .input,.output,.answer,.checker{
       background-color: #000000 !important;
     }
+      
+    h3{
+      text-shadow: 0 0 10px #ffffff , 0 0 10px #ffffff !important;
+    }
   `;
 
   let styleSheet = document.getElementById("dark-mode-styles");
